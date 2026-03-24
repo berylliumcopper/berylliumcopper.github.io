@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Placeholder photo three</title>
+  <desc id="desc">Abstract forest scene.</desc>
+  <defs>
+    <linearGradient id="forest" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#86efac" />
+      <stop offset="100%" stop-color="#022c22" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#forest)" />
+  <path d="M120 800 L260 420 L400 800 Z" fill="#166534" />
+  <path d="M330 800 L520 300 L700 800 Z" fill="#14532d" />
+  <path d="M620 800 L820 370 L1010 800 Z" fill="#166534" />
+  <path d="M900 800 L1030 470 L1160 800 Z" fill="#14532d" />
+  <rect y="700" width="1200" height="100" fill="#052e16" />
+</svg>
