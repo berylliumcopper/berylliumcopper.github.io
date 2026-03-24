@@ -24,32 +24,189 @@
       <p class="eyebrow">Gallery</p>
       <h1>Pictures and moments</h1>
       <p class="lead">
-        A small collection of images, starting with one of your own from `assets/images/`.
+        Browse the gallery by collection. Each image opens in a larger viewer when clicked.
       </p>
     </section>
 
-    <section class="gallery-grid">
-      <figure class="panel gallery-card">
-        <img src="assets/images/mc-001.png" alt="Minecraft city waterfront scene">
-        <figcaption>`mc-001.png` from your local image collection.</figcaption>
-      </figure>
+    <section class="gallery-section">
+      <div class="section-header gallery-section-header">
+        <div>
+          <h2>Minecraft</h2>
+        </div>
+        <p class="section-note">My Minecraft buildings.</p>
+      </div>
 
-      <figure class="panel gallery-card">
-        <img src="assets/images/photo-2.svg" alt="Placeholder landscape 2">
-        <figcaption>Caption for photo two.</figcaption>
-      </figure>
+      <div class="gallery-grid">
+        <figure class="panel gallery-card">
+          <button
+            class="gallery-trigger"
+            type="button"
+            data-full-src="assets/images/mc-001.png"
+            data-full-alt="Grand Canal Waterfront, Ping Ning."
+            data-caption="Grand Canal Waterfront, Ping Ning.">
+            <img
+              src="assets/images/mc-001.png"
+              alt="Grand Canal Waterfront, Ping Ning."
+              loading="lazy"
+              decoding="async">
+          </button>
+          <figcaption>Grand Canal Waterfront, Ping Ning.</figcaption>
+        </figure>
 
-      <figure class="panel gallery-card">
-        <img src="assets/images/photo-3.svg" alt="Placeholder landscape 3">
-        <figcaption>Caption for photo three.</figcaption>
-      </figure>
+        <figure class="panel gallery-card">
+          <button
+            class="gallery-trigger"
+            type="button"
+            data-full-src="assets/images/mc-002.png"
+            data-full-alt="Ping Ning North Railway Station, Ping Ning City."
+            data-caption="Ping Ning North Railway Station, Ping Ning.">
+            <img
+              src="assets/images/mc-002.png"
+              alt="Ping Ning North Railway Station, Ping Ning."
+              loading="lazy"
+              decoding="async">
+          </button>
+          <figcaption>Ping Ning North Railway Station, Ping Ning.</figcaption>
+        </figure>
+
+        <figure class="panel gallery-card">
+          <button
+            class="gallery-trigger"
+            type="button"
+            data-full-src="assets/images/mc-003.png"
+            data-full-alt="Dewar Square, Ping Ning."
+            data-caption="Dewar Square, Ping Ning.">
+            <img
+              src="assets/images/mc-003.png"
+              alt="Dewar Square, Ping Ning."
+              loading="lazy"
+              decoding="async">
+          </button>
+          <figcaption>Dewar Square, Ping Ning.</figcaption>
+        </figure>
+
+        <figure class="panel gallery-card">
+          <button
+            class="gallery-trigger"
+            type="button"
+            data-full-src="assets/images/mc-004.png"
+            data-full-alt="Tower of Allay, Ping Ning."
+            data-caption="Tower of Allay, Ping Ning.">
+            <img
+              src="assets/images/mc-004.png"
+              alt="Tower of Allay, Ping Ning."
+              loading="lazy"
+              decoding="async">
+          </button>
+          <figcaption>Tower of Allay, Ping Ning.</figcaption>
+        </figure>
+
+      </div>
+    </section>
+
+    <section class="gallery-section">
+      <div class="section-header gallery-section-header">
+        <div>
+          <h2>Other Images</h2>
+        </div>
+        <p class="section-note">You can keep adding more themed sections like this one.</p>
+      </div>
+
+      <div class="gallery-grid">
+        <figure class="panel gallery-card">
+          <button
+            class="gallery-trigger"
+            type="button"
+            data-full-src="assets/images/photo-2.svg"
+            data-full-alt="Placeholder landscape 2"
+            data-caption="Caption for photo two.">
+            <img
+              src="assets/images/photo-2.svg"
+              alt="Placeholder landscape 2"
+              loading="lazy"
+              decoding="async">
+          </button>
+          <figcaption>Caption for photo two.</figcaption>
+        </figure>
+
+        <figure class="panel gallery-card">
+          <button
+            class="gallery-trigger"
+            type="button"
+            data-full-src="assets/images/photo-3.svg"
+            data-full-alt="Placeholder landscape 3"
+            data-caption="Caption for photo three.">
+            <img
+              src="assets/images/photo-3.svg"
+              alt="Placeholder landscape 3"
+              loading="lazy"
+              decoding="async">
+          </button>
+          <figcaption>Caption for photo three.</figcaption>
+        </figure>
+
+        
+      </div>
     </section>
   </main>
+
+  <div class="lightbox" id="lightbox" hidden>
+    <div class="lightbox-backdrop" data-close-lightbox></div>
+    <div class="lightbox-dialog" role="dialog" aria-modal="true" aria-labelledby="lightbox-caption">
+      <button class="lightbox-close" type="button" aria-label="Close image viewer" data-close-lightbox>&times;</button>
+      <img class="lightbox-image" id="lightbox-image" src="" alt="">
+      <p class="lightbox-caption" id="lightbox-caption"></p>
+    </div>
+  </div>
 
   <footer class="site-footer">
     <div class="container footer-wrap">
       <p>Add more images by copying this card pattern.</p>
     </div>
   </footer>
+
+  <script>
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImage = document.getElementById("lightbox-image");
+    const lightboxCaption = document.getElementById("lightbox-caption");
+    const triggers = document.querySelectorAll(".gallery-trigger");
+    const closeTargets = document.querySelectorAll("[data-close-lightbox]");
+
+    function openLightbox(src, alt, caption) {
+      lightboxImage.src = src;
+      lightboxImage.alt = alt;
+      lightboxCaption.textContent = caption;
+      lightbox.hidden = false;
+      document.body.classList.add("lightbox-open");
+    }
+
+    function closeLightbox() {
+      lightbox.hidden = true;
+      lightboxImage.src = "";
+      lightboxImage.alt = "";
+      lightboxCaption.textContent = "";
+      document.body.classList.remove("lightbox-open");
+    }
+
+    triggers.forEach((trigger) => {
+      trigger.addEventListener("click", () => {
+        openLightbox(
+          trigger.dataset.fullSrc,
+          trigger.dataset.fullAlt,
+          trigger.dataset.caption
+        );
+      });
+    });
+
+    closeTargets.forEach((target) => {
+      target.addEventListener("click", closeLightbox);
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && !lightbox.hidden) {
+        closeLightbox();
+      }
+    });
+  </script>
 </body>
 </html>
