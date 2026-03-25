@@ -214,6 +214,7 @@ p {
 
 .article {
   max-width: 760px;
+  padding: 0.5rem 0 0;
 }
 
 .gallery-card figcaption {
