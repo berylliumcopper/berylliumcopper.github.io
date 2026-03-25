@@ -84,6 +84,60 @@ p {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
+  align-items: center;
+}
+
+.lang-switch {
+  display: flex;
+  gap: 0.5rem;
+  margin-left: 0.5rem;
+  padding-left: 0.5rem;
+  border-left: 1px solid var(--border);
+}
+
+.lang-btn {
+  background: none;
+  border: none;
+  color: var(--muted);
+  cursor: pointer;
+  font-size: 0.85rem;
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+
+.lang-btn:hover {
+  color: var(--text);
+}
+
+.lang-btn.active {
+  color: var(--accent);
+  font-weight: bold;
+}
+
+[data-lang] {
+  display: none;
+}
+
+html[lang="en"] [data-lang="en"] {
+  display: block;
+}
+
+html[lang="zh"] [data-lang="zh"] {
+  display: block;
+}
+
+/* For inline elements */
+span[data-lang], a[data-lang] {
+  display: none;
+}
+
+html[lang="en"] span[data-lang="en"], html[lang="en"] a[data-lang="en"] {
+  display: inline;
+}
+
+html[lang="zh"] span[data-lang="zh"], html[lang="zh"] a[data-lang="zh"] {
+  display: inline;
 }
 
 .site-nav a {

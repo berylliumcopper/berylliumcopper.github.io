@@ -1,39 +1,86 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Blog post archive for a personal website.">
-  <title>berylliumcopper | Blogs</title>
+  <title data-en="berylliumcopper | Blogs" data-zh="berylliumcopper | 博客">berylliumcopper | 博客</title>
   <link rel="stylesheet" href="../assets/css/styles.css">
+  <script src="../assets/js/lang-switch.js"></script>
 </head>
 <body>
   <header class="site-header">
     <div class="container nav-wrap">
       <a class="brand" href="../index.html">berylliumcopper</a>
       <nav class="site-nav" aria-label="Main navigation">
-        <a href="../index.html">Home</a>
-        <a href="../gallery.html">Gallery</a>
-        <a class="active" href="index.html">Blogs</a>
+        <a href="../index.html">
+          <span data-lang="en">Home</span>
+          <span data-lang="zh">首页</span>
+        </a>
+        <a href="../gallery.html">
+          <span data-lang="en">Gallery</span>
+          <span data-lang="zh">图库</span>
+        </a>
+        <a class="active" href="index.html">
+          <span data-lang="en">Blogs</span>
+          <span data-lang="zh">博客</span>
+        </a>
+        <div class="lang-switch">
+          <button class="lang-btn" data-lang-target="en">EN</button>
+          <button class="lang-btn" data-lang-target="zh">中文</button>
+        </div>
       </nav>
     </div>
   </header>
 
   <main class="container page-stack">
     <section class="page-intro">
-      <p class="eyebrow">Blogs</p>
-      <h1>Notes, updates, and writing</h1>
-      <p class="lead">
-        Publish new entries by adding another HTML file in this folder and linking it below.
+      <p class="eyebrow">
+        <span data-lang="en">Blogs</span>
+        <span data-lang="zh">博客</span>
       </p>
+      <h1>
+        <span data-lang="en">Notes and writing</span>
+        <span data-lang="zh">笔记与文章</span>
+      </h1>
+      <div class="lead">
+        <div data-lang="en">
+          Below are some articles I wrote, including:
+          <ul>
+            <li>A series of novels mostly based in the Minecraft city Ping Ning (marked with Roman numerals, the missing numbers represent those with an idea but not yet finished).</li>
+            <li>Things related to mathematics, coding, and algorithms.</li>
+            <li>Puzzle solving related articles.</li>
+            <li>Other ideas and thoughts.</li>
+          </ul>
+        </div>
+        <div data-lang="zh">
+          下面是我写的一些文章，包括：
+          <ul>
+            <li>一系列主要基于Minecraft城市“平宁”的小说（用罗马数字标记，缺失的数字代表已有构思但尚未完成的作品）。</li>
+            <li>与数学、编程和算法相关的内容。</li>
+            <li>解谜相关的文章。</li>
+            <li>其他的想法和思考。</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="card-grid" style="margin-top: 0.75rem;">
+      <article class="panel post-card">
+        <p class="meta">解谜</p>
+        <h2><a href="ccbc16/ccbc16.html">CCBC16个人总结</a></h2>
+        <p>
+          【2025年8月11日】Puzzlehunt比赛CCBC16的个人总结。
+        </p>
+      </article>
     </section>
 
     <section class="card-grid" style="margin-top: 0.75rem;">
       <article class="panel post-card">
         <p class="meta">小说 科幻</p>
-        <h2><a href="16TheFourthOne.html">XVI. 第四者</a></h2>
+        <h2><a href="novels/16TheFourthOne.html">XVI. 第四者</a></h2>
         <p>
-          【2024年12月25日】一篇很奇怪的小说，感觉大部分内容挺乏味的，带有一定的科幻色彩（同时夹了一些私货）
+          【2024年12月25日】一篇很奇怪的小说，感觉大部分内容挺乏味的。带有一定的科幻色彩，同时夹了一些私货。
         </p>
       </article>
     </section>
@@ -41,9 +88,9 @@
     <section class="card-grid" style="margin-top: 0.75rem;">
       <article class="panel post-card">
         <p class="meta">小说 平宁</p>
-        <h2><a href="15She.html">XV. 她</a></h2>
+        <h2><a href="novels/15She.html">XV. 她</a></h2>
         <p>
-          【2022年6月29日】这一篇是我写过的最短的小说，不到1800字（当然，不考虑中学时那些写作记叙文读作小说的作文的情况下）
+          【2022年6月29日】这一篇是我写过的最短的小说，不到1800字（当然，不考虑中学时那些写作记叙文读作小说的作文的情况下）。
         </p>
       </article>
     </section>
@@ -51,9 +98,9 @@
     <section class="card-grid" style="margin-top: 0.75rem;">
       <article class="panel post-card">
         <p class="meta">小说 平宁</p>
-        <h2><a href="14TheStringsOf.html">XIV. 雨丝</a></h2>
+        <h2><a href="novels/14TheStringsOf.html">XIV. 雨丝</a></h2>
         <p>
-          【2022年4月15日】关于一个废物的有些枯燥的小说，充满了琐碎的回忆
+          【2022年4月15日】关于一个废物的有些枯燥的小说，充满了琐碎的回忆。
         </p>
       </article>
     </section>
@@ -61,7 +108,7 @@
     <section class="card-grid" style="margin-top: 0.75rem;">
       <article class="panel post-card">
         <p class="meta">小说 平宁</p>
-        <h2><a href="12ThePath.html">XII. 山间步道</a></h2>
+        <h2><a href="novels/12ThePath.html">XII. 山间步道</a></h2>
         <p>
           【2021年11月25日】基于一个梦写成的短篇小说，有些飘渺。
         </p>
@@ -71,9 +118,9 @@
     <section class="card-grid" style="margin-top: 0.75rem;">
       <article class="panel post-card">
         <p class="meta">小说 平宁</p>
-        <h2><a href="09CAScienceCity.html">IX(C). 20世纪50年代的一个科学城</a></h2>
+        <h2><a href="novels/09CAScienceCity.html">IX(C). 20世纪50年代的一个科学城</a></h2>
         <p>
-          【2020年1月3日】《爱情大厅/The Hall of Love》（一个比较长的带有科幻色彩的小说）的设定补充集，但正文从2019年一直咕到了现在……六年之后再看这个短篇，甚至有些不明白为什么在疫情之前就会写出“命途难测”这样的话。
+          【2020年1月3日】《IX. 爱情大厅/The Hall of Love》（一个比较长的带有科幻色彩的小说）的设定补充集，但正文从2019年一直咕到了现在……六年之后再看这个短篇，甚至有些不明白为什么在疫情之前就会写出“命途难测”这样的话。
         </p>
       </article>
     </section>
@@ -81,9 +128,9 @@
     <section class="card-grid" style="margin-top: 0.75rem;">
       <article class="panel post-card">
         <p class="meta">小说 平宁</p>
-        <h2><a href="09BThePowerOf.html">IX(B). 一个平凡人的力量</a></h2>
+        <h2><a href="novels/09BThePowerOf.html">IX(B). 一个平凡人的力量</a></h2>
         <p>
-          【2019年12月28日】《爱情大厅/The Hall of Love》（一个比较长的带有科幻色彩的小说）的设定补充集，但正文从2019年一直咕到了现在……这个短篇的设定与农民工有关——一个我本应有更多了解的群体。
+          【2019年12月28日】《IX. 爱情大厅/The Hall of Love》（一个比较长的带有科幻色彩的小说）的设定补充集，但正文从2019年一直咕到了现在……这个短篇的设定与农民工有关——一个我本应有更多了解的群体。
         </p>
       </article>
     </section>
@@ -91,7 +138,7 @@
     <section class="card-grid" style="margin-top: 0.75rem;">
       <article class="panel post-card">
         <p class="meta">小说 平宁</p>
-        <h2><a href="03TheLetter.html">III. 信</a></h2>
+        <h2><a href="novels/03TheLetter.html">III. 信</a></h2>
         <p>
           【2018年11月24日】本文的内容与现实中的任何事件均无任何关联（？
         </p>
@@ -101,7 +148,7 @@
     <section class="card-grid" style="margin-top: 0.75rem;">
       <article class="panel post-card">
         <p class="meta">小说 平宁</p>
-        <h2><a href="02Researcher.html">II. 研究员</a></h2>
+        <h2><a href="novels/02Researcher.html">II. 研究员</a></h2>
         <p>
           【2018年8月10日】整个系列最早的两篇小说之一
         </p>
@@ -111,7 +158,7 @@
     <section class="card-grid" style="margin-top: 0.75rem;">
       <article class="panel post-card">
         <p class="meta">小说 平宁</p>
-        <h2><a href="01ToKingSea.html">I. 至: 靖海</a></h2>
+        <h2><a href="novels/01ToKingSea.html">I. 至: 靖海</a></h2>
         <p>
           【2018年7月26日】整个系列最早的两篇小说之一
         </p>
@@ -122,7 +169,9 @@
 
   <footer class="site-footer">
     <div class="container footer-wrap">
-      <p>Built with static HTML and CSS for GitHub Pages.</p>
+      <p>
+        Built with static HTML and CSS for GitHub Pages.
+      </p>
     </div>
   </footer>
 </body>

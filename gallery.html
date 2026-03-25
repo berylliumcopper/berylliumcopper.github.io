@@ -1,30 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Photo gallery page for a personal website.">
-  <title>berylliumcopper | Gallery</title>
+  <title data-en="berylliumcopper | Gallery" data-zh="berylliumcopper | 图库">berylliumcopper | 图库</title>
   <link rel="stylesheet" href="assets/css/styles.css">
+  <script src="assets/js/lang-switch.js"></script>
 </head>
 <body>
   <header class="site-header">
     <div class="container nav-wrap">
-      <a class="brand" href="index.html">Your Name</a>
+      <a class="brand" href="index.html">berylliumcopper</a>
       <nav class="site-nav" aria-label="Main navigation">
-        <a href="index.html">Home</a>
-        <a class="active" href="gallery.html">Gallery</a>
-        <a href="blogs/index.html">Blogs</a>
+        <a href="index.html">
+          <span data-lang="en">Home</span>
+          <span data-lang="zh">首页</span>
+        </a>
+        <a class="active" href="gallery.html">
+          <span data-lang="en">Gallery</span>
+          <span data-lang="zh">图库</span>
+        </a>
+        <a href="blogs/index.html">
+          <span data-lang="en">Blogs</span>
+          <span data-lang="zh">博客</span>
+        </a>
+        <div class="lang-switch">
+          <button class="lang-btn" data-lang-target="en">EN</button>
+          <button class="lang-btn" data-lang-target="zh">中文</button>
+        </div>
       </nav>
     </div>
   </header>
 
   <main class="container page-stack">
     <section class="page-intro">
-      <p class="eyebrow">Gallery</p>
-      <h1>Pictures and moments</h1>
+      <p class="eyebrow">
+        <span data-lang="en">Gallery</span>
+        <span data-lang="zh">图库</span>
+      </p>
+      <h1>
+        <span data-lang="en">Pictures</span>
+        <span data-lang="zh">图片</span>
+      </h1>
       <p class="lead">
-        Browse the gallery by collection. Each image opens in a larger viewer when clicked.
+        <span data-lang="en">Each image opens in a larger viewer when clicked.</span>
+        <span data-lang="zh">点击图片可查看大图。</span>
       </p>
     </section>
 
@@ -33,7 +54,10 @@
         <div>
           <h2>Minecraft</h2>
         </div>
-        <p class="section-note">My Minecraft buildings.</p>
+        <p class="section-note">
+          <span data-lang="en">Selected Minecraft buildings.</span>
+          <span data-lang="zh">精选 Minecraft 建筑。</span>
+        </p>
       </div>
 
       <div class="gallery-grid">
@@ -41,16 +65,60 @@
           <button
             class="gallery-trigger"
             type="button"
+            data-full-src="assets/images/pku-lib-0.png"
+            data-full-alt="A Replica of Peking University Library. (Rendered by PKUMC)"
+            data-caption-en="A Replica of Peking University Library. (Rendered by PKUMC)"
+            data-caption-zh="北京大学图书馆（由 PKUMC 渲染）">
+            <img
+              src="assets/images/pku-lib-0.png"
+              alt="A Replica of Peking University Library. (Rendered by PKUMC)"
+              loading="lazy"
+              decoding="async">
+          </button>
+          <figcaption>
+            <span data-lang="en">A Replica of Peking University Library. (Rendered by PKUMC)</span>
+            <span data-lang="zh">北京大学图书馆（由 PKUMC 渲染）</span>
+          </figcaption>
+        </figure>
+
+        <figure class="panel gallery-card">
+          <button
+            class="gallery-trigger"
+            type="button"
+            data-full-src="assets/images/mc-000.png"
+            data-full-alt="Overview of Ping Nan District, Ping Ning."
+            data-caption-en="Overview of Ping Nan District, Ping Ning."
+            data-caption-zh="平宁市平南区概览">
+            <img
+              src="assets/images/mc-000.png"
+              alt="Overview of Ping Nan District, Ping Ning."
+              loading="lazy"
+              decoding="async">
+          </button>
+          <figcaption>
+            <span data-lang="en">Overview of Ping Nan District, Ping Ning.</span>
+            <span data-lang="zh">平宁市平南区概览</span>
+          </figcaption>
+        </figure>
+
+        <figure class="panel gallery-card">
+          <button
+            class="gallery-trigger"
+            type="button"
             data-full-src="assets/images/mc-001.png"
             data-full-alt="Grand Canal Waterfront, Ping Ning."
-            data-caption="Grand Canal Waterfront, Ping Ning.">
+            data-caption-en="Grand Canal Waterfront, Ping Ning."
+            data-caption-zh="运河岸边（平宁）">
             <img
               src="assets/images/mc-001.png"
               alt="Grand Canal Waterfront, Ping Ning."
               loading="lazy"
               decoding="async">
           </button>
-          <figcaption>Grand Canal Waterfront, Ping Ning.</figcaption>
+          <figcaption>
+            <span data-lang="en">Grand Canal Waterfront, Ping Ning.</span>
+            <span data-lang="zh">运河岸边（平宁）</span>
+          </figcaption>
         </figure>
 
         <figure class="panel gallery-card">
@@ -59,14 +127,18 @@
             type="button"
             data-full-src="assets/images/mc-002.png"
             data-full-alt="Ping Ning North Railway Station, Ping Ning City."
-            data-caption="Ping Ning North Railway Station, Ping Ning.">
+            data-caption-en="Ping Ning North Railway Station, Ping Ning."
+            data-caption-zh="平宁北站">
             <img
               src="assets/images/mc-002.png"
               alt="Ping Ning North Railway Station, Ping Ning."
               loading="lazy"
               decoding="async">
           </button>
-          <figcaption>Ping Ning North Railway Station, Ping Ning.</figcaption>
+          <figcaption>
+            <span data-lang="en">Ping Ning North Railway Station, Ping Ning.</span>
+            <span data-lang="zh">平宁北站</span>
+          </figcaption>
         </figure>
 
         <figure class="panel gallery-card">
@@ -75,14 +147,18 @@
             type="button"
             data-full-src="assets/images/mc-003.png"
             data-full-alt="Dewar Square, Ping Ning."
-            data-caption="Dewar Square, Ping Ning.">
+            data-caption-en="Dewar Square, Ping Ning."
+            data-caption-zh="杜瓦广场（平宁）">
             <img
               src="assets/images/mc-003.png"
               alt="Dewar Square, Ping Ning."
               loading="lazy"
               decoding="async">
           </button>
-          <figcaption>Dewar Square, Ping Ning.</figcaption>
+          <figcaption>
+            <span data-lang="en">Dewar Square, Ping Ning.</span>
+            <span data-lang="zh">杜瓦广场（平宁）</span>
+          </figcaption>
         </figure>
 
         <figure class="panel gallery-card">
@@ -91,63 +167,203 @@
             type="button"
             data-full-src="assets/images/mc-004.png"
             data-full-alt="Tower of Allay, Ping Ning."
-            data-caption="Tower of Allay, Ping Ning.">
+            data-caption-en="Tower of Allay, Ping Ning."
+            data-caption-zh="悦灵塔（平宁）">
             <img
               src="assets/images/mc-004.png"
               alt="Tower of Allay, Ping Ning."
               loading="lazy"
               decoding="async">
           </button>
-          <figcaption>Tower of Allay, Ping Ning.</figcaption>
-        </figure>
-
-      </div>
-    </section>
-
-    <section class="gallery-section">
-      <div class="section-header gallery-section-header">
-        <div>
-          <h2>Other Images</h2>
-        </div>
-        <p class="section-note">You can keep adding more themed sections like this one.</p>
-      </div>
-
-      <div class="gallery-grid">
-        <figure class="panel gallery-card">
-          <button
-            class="gallery-trigger"
-            type="button"
-            data-full-src="assets/images/photo-2.svg"
-            data-full-alt="Placeholder landscape 2"
-            data-caption="Caption for photo two.">
-            <img
-              src="assets/images/photo-2.svg"
-              alt="Placeholder landscape 2"
-              loading="lazy"
-              decoding="async">
-          </button>
-          <figcaption>Caption for photo two.</figcaption>
+          <figcaption>
+            <span data-lang="en">Tower of Allay, Ping Ning.</span>
+            <span data-lang="zh">悦灵塔（平宁）</span>
+          </figcaption>
         </figure>
 
         <figure class="panel gallery-card">
           <button
             class="gallery-trigger"
             type="button"
-            data-full-src="assets/images/photo-3.svg"
-            data-full-alt="Placeholder landscape 3"
-            data-caption="Caption for photo three.">
+            data-full-src="assets/images/mc-005.png"
+            data-full-alt="Fu Canal Sports Center, Ping Ning."
+            data-caption-en="Fu Canal Sports Center, Ping Ning."
+            data-caption-zh="府河体育中心（平宁）">
             <img
-              src="assets/images/photo-3.svg"
-              alt="Placeholder landscape 3"
+              src="assets/images/mc-005.png"
+              alt="Fu Canal Sports Center, Ping Ning."
               loading="lazy"
               decoding="async">
           </button>
-          <figcaption>Caption for photo three.</figcaption>
+          <figcaption>
+            <span data-lang="en">Fu Canal Sports Center, Ping Ning.</span>
+            <span data-lang="zh">府河体育中心（平宁）</span>
+          </figcaption>
         </figure>
 
-        
+        <figure class="panel gallery-card">
+          <button
+            class="gallery-trigger"
+            type="button"
+            data-full-src="assets/images/mc-006.png"
+            data-full-alt="Ping Ning No. 3 High School, Ping Ning."
+            data-caption-en="Ping Ning No. 3 High School, Ping Ning."
+            data-caption-zh="平宁三中">
+            <img
+              src="assets/images/mc-006.png"
+              alt="Ping Ning No. 3 High School, Ping Ning."
+              loading="lazy"
+              decoding="async">
+          </button>
+          <figcaption>
+            <span data-lang="en">Ping Ning No. 3 High School, Ping Ning.</span>
+            <span data-lang="zh">平宁三中</span>
+          </figcaption>
+        </figure>
+
+        <figure class="panel gallery-card">
+          <button
+            class="gallery-trigger"
+            type="button"
+            data-full-src="assets/images/mc-007.png"
+            data-full-alt="Republic Square, Ping Ning."
+            data-caption-en="Republic Square, Ping Ning."
+            data-caption-zh="共和广场（平宁）">
+            <img
+              src="assets/images/mc-007.png"
+              alt="Republic Square, Ping Ning."
+              loading="lazy"
+              decoding="async">
+          </button>
+          <figcaption>
+            <span data-lang="en">Republic Square, Ping Ning.</span>
+            <span data-lang="zh">共和广场（平宁）</span>
+          </figcaption>
+        </figure>
+
+        <figure class="panel gallery-card">
+          <button
+            class="gallery-trigger"
+            type="button"
+            data-full-src="assets/images/mc-008.png"
+            data-full-alt="Altar of Ages, Ping Ning."
+            data-caption-en="Altar of Ages, Ping Ning."
+            data-caption-zh="岁月祭坛（平宁）">
+            <img
+              src="assets/images/mc-008.png"
+              alt="Altar of Ages, Ping Ning."
+              loading="lazy"
+              decoding="async">
+          </button>
+          <figcaption>
+            <span data-lang="en">Altar of Ages, Ping Ning.</span>
+            <span data-lang="zh">岁月祭坛（平宁）</span>
+          </figcaption>
+        </figure>
+
+        <figure class="panel gallery-card">
+          <button
+            class="gallery-trigger"
+            type="button"
+            data-full-src="assets/images/mc-009.png"
+            data-full-alt="Overview of Friendship Bridge and South Bank, Ping Ning."
+            data-caption-en="Overview of Friendship Bridge and South Bank, Ping Ning."
+            data-caption-zh="平宁友谊桥及南岸概览">
+            <img
+              src="assets/images/mc-009.png"
+              alt="Overview of Friendship Bridge and South Bank, Ping Ning."
+              loading="lazy"
+              decoding="async">
+          </button>
+          <figcaption>
+            <span data-lang="en">Overview of Friendship Bridge and South Bank, Ping Ning.</span>
+            <span data-lang="zh">平宁友谊桥及南岸概览</span>
+          </figcaption>
+        </figure>
+
+        <figure class="panel gallery-card">
+          <button
+            class="gallery-trigger"
+            type="button"
+            data-full-src="assets/images/mc-010.png"
+            data-full-alt="Overview of Bei Zhen District, Ping Ning."
+            data-caption-en="Overview of Bei Zhen District, Ping Ning."
+            data-caption-zh="平宁北镇区概览">
+            <img
+              src="assets/images/mc-010.png"
+              alt="Overview of Bei Zhen District, Ping Ning."
+              loading="lazy"
+              decoding="async">
+          </button>
+          <figcaption>
+            <span data-lang="en">Overview of Bei Zhen District, Ping Ning.</span>
+            <span data-lang="zh">平宁北镇区概览</span>
+          </figcaption>
+        </figure>
+
+        <figure class="panel gallery-card">
+          <button
+            class="gallery-trigger"
+            type="button"
+            data-full-src="assets/images/mc-011.png"
+            data-full-alt="Hou Hu Building, Ping Ning."
+            data-caption-en="Hou Hu Building, Ping Ning."
+            data-caption-zh="后湖阁（平宁）">
+            <img
+              src="assets/images/mc-011.png"
+              alt="Hou Hu Building, Ping Ning."
+              loading="lazy"
+              decoding="async">
+          </button>
+          <figcaption>
+            <span data-lang="en">Hou Hu Building, Ping Ning.</span>
+            <span data-lang="zh">后湖阁（平宁）</span>
+          </figcaption>
+        </figure>
+
+        <figure class="panel gallery-card">
+          <button
+            class="gallery-trigger"
+            type="button"
+            data-full-src="assets/images/mc-012.png"
+            data-full-alt="Green City Square & Canal Middle School, Ping Ning."
+            data-caption-en="Green City Square & Canal Middle School, Ping Ning."
+            data-caption-zh="绿城广场及运河中学（平宁）">
+            <img
+              src="assets/images/mc-012.png"
+              alt="Green City Square & Canal Middle School, Ping Ning."
+              loading="lazy"
+              decoding="async">
+          </button>
+          <figcaption>
+            <span data-lang="en">Green City Square & Canal Middle School, Ping Ning.</span>
+            <span data-lang="zh">绿城广场及运河中学（平宁）</span>
+          </figcaption>
+        </figure>
+
+        <figure class="panel gallery-card">
+          <button
+            class="gallery-trigger"
+            type="button"
+            data-full-src="assets/images/mc-013.png"
+            data-full-alt="Square of Selene, Ping Ning."
+            data-caption-en="Square of Selene, Ping Ning."
+            data-caption-zh="塞勒涅广场（平宁）">
+            <img
+              src="assets/images/mc-013.png"
+              alt="Square of Selene, Ping Ning."
+              loading="lazy"
+              decoding="async">
+          </button>
+          <figcaption>
+            <span data-lang="en">Square of Selene, Ping Ning.</span>
+            <span data-lang="zh">塞勒涅广场（平宁）</span>
+          </figcaption>
+        </figure>
+
       </div>
     </section>
+
   </main>
 
   <div class="lightbox" id="lightbox" hidden>
@@ -161,7 +377,9 @@
 
   <footer class="site-footer">
     <div class="container footer-wrap">
-      <p>Built with static HTML and CSS for GitHub Pages.</p>
+      <p>
+        Built with static HTML and CSS for GitHub Pages.
+      </p>
     </div>
   </footer>
 
@@ -172,12 +390,24 @@
     const triggers = document.querySelectorAll(".gallery-trigger");
     const closeTargets = document.querySelectorAll("[data-close-lightbox]");
 
-    function openLightbox(src, alt, caption) {
+    function openLightbox(trigger) {
+      const src = trigger.dataset.fullSrc;
+      const alt = trigger.dataset.fullAlt;
+      
+      // Multi-lang caption support
+      const currentLang = document.documentElement.lang || 'zh';
+      const langSuffix = currentLang === 'zh' ? 'Zh' : 'En';
+      const caption = trigger.dataset['caption' + langSuffix] || trigger.dataset.caption;
+
       lightboxImage.src = src;
       lightboxImage.alt = alt;
       lightboxCaption.textContent = caption;
       lightbox.hidden = false;
       document.body.classList.add("lightbox-open");
+      
+      // Mark as active for lang-switch.js to update if language changes while open
+      triggers.forEach(t => t.classList.remove('active-trigger'));
+      trigger.classList.add('active-trigger');
     }
 
     function closeLightbox() {
@@ -186,15 +416,12 @@
       lightboxImage.alt = "";
       lightboxCaption.textContent = "";
       document.body.classList.remove("lightbox-open");
+      triggers.forEach(t => t.classList.remove('active-trigger'));
     }
 
     triggers.forEach((trigger) => {
       trigger.addEventListener("click", () => {
-        openLightbox(
-          trigger.dataset.fullSrc,
-          trigger.dataset.fullAlt,
-          trigger.dataset.caption
-        );
+        openLightbox(trigger);
       });
     });
 
