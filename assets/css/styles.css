@@ -266,6 +266,30 @@ html[lang="zh"] span[data-lang="zh"], html[lang="zh"] a[data-lang="zh"] {
   color: var(--muted);
 }
 
+.page-nav {
+  margin-bottom: 2rem;
+}
+
+.bottom-nav {
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+  transition: color 0.2s;
+}
+
+.back-link:hover {
+  color: var(--accent);
+}
+
 .article {
   max-width: 760px;
   padding: 0.5rem 0 0;

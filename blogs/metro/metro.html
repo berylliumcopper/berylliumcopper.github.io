@@ -1,7 +1,13 @@
 ---
 layout: default
 ---
-    <article class="article">
+    <article class="article container">
+      <nav class="page-nav">
+        <a href="{{ '/blogs/index.html' | relative_url }}" class="back-link">
+          <span data-lang="en">&larr; Back to all posts</span>
+          <span data-lang="zh">&larr; 返回博客列表</span>
+        </a>
+      </nav>
       <p class="meta">平宁</p>
       <h1>平宁地铁线路图</h1>
       <h3>（2026年3月26日版）</h3>
@@ -12,5 +18,11 @@ layout: default
 
   Painted with <a href="https://railmapgen.github.io/rmp/">Rail Map Painter</a>.
 
+      <nav class="page-nav bottom-nav">
+        <a href="{{ '/blogs/index.html' | relative_url }}" class="back-link">
+          <span data-lang="en">&larr; Back to all posts</span>
+          <span data-lang="zh">&larr; 返回博客列表</span>
+        </a>
+      </nav>
     </article>
 

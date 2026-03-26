@@ -16,15 +16,15 @@ layout: default
     <div class="container nav-wrap">
       <a class="brand" href="{{ '/' | relative_url }}">berylliumcopper</a>
       <nav class="site-nav" aria-label="Main navigation">
-        <a class="active" href="{{ '/' | relative_url }}">
+        <a {% if page.url == "/" %}class="active"{% endif %} href="{{ '/' | relative_url }}">
           <span data-lang="en">Home</span>
           <span data-lang="zh">首页</span>
         </a>
-        <a href="{{ '/gallery.html' | relative_url }}">
+        <a {% if page.url contains "/gallery" %}class="active"{% endif %} href="{{ '/gallery.html' | relative_url }}">
           <span data-lang="en">Gallery</span>
           <span data-lang="zh">图库</span>
         </a>
-        <a href="{{ '/blogs/index.html' | relative_url }}">
+        <a {% if page.url contains "/blogs/" %}class="active"{% endif %} href="{{ '/blogs/index.html' | relative_url }}">
           <span data-lang="en">Blogs</span>
           <span data-lang="zh">博客</span>
         </a>
