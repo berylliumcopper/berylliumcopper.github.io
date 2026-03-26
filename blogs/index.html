@@ -1,39 +1,6 @@
-<!DOCTYPE html>
-<html lang="zh">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Blog post archive for a personal website.">
-  <title data-en="berylliumcopper | Blogs" data-zh="berylliumcopper | 博客">berylliumcopper | 博客</title>
-  <link rel="stylesheet" href="../assets/css/styles.css">
-  <script src="../assets/js/lang-switch.js"></script>
-</head>
-<body>
-  <header class="site-header">
-    <div class="container nav-wrap">
-      <a class="brand" href="../index.html">berylliumcopper</a>
-      <nav class="site-nav" aria-label="Main navigation">
-        <a href="../index.html">
-          <span data-lang="en">Home</span>
-          <span data-lang="zh">首页</span>
-        </a>
-        <a href="../gallery.html">
-          <span data-lang="en">Gallery</span>
-          <span data-lang="zh">图库</span>
-        </a>
-        <a class="active" href="index.html">
-          <span data-lang="en">Blogs</span>
-          <span data-lang="zh">博客</span>
-        </a>
-        <div class="lang-switch">
-          <button class="lang-btn" data-lang-target="en">EN</button>
-          <button class="lang-btn" data-lang-target="zh">中文</button>
-        </div>
-      </nav>
-    </div>
-  </header>
-
-  <main class="container page-stack">
+---
+layout: default
+---
     <section class="page-intro">
       <p class="eyebrow">
         <span data-lang="en">Blogs</span>
@@ -68,7 +35,7 @@
     <section class="card-grid" style="margin-top: 0.75rem;">
       <article class="panel post-card">
         <p class="meta">平宁</p>
-        <h2><a href="metro/metro.html">平宁地铁线路图</a></h2>
+        <h2><a href="{{ 'blogs/metro/metro.html' | relative_url }}">平宁地铁线路图</a></h2>
         <p>
           【2026年3月26日】平宁地铁线路图（相关设定随城建进度持续更新）。
         </p>
@@ -78,7 +45,7 @@
     <section class="card-grid" style="margin-top: 0.75rem;">
       <article class="panel post-card">
         <p class="meta">解谜</p>
-        <h2><a href="ccbc16/ccbc16.html">CCBC16个人总结</a></h2>
+        <h2><a href="{{ 'blogs/ccbc16/ccbc16.html' | relative_url }}">CCBC16个人总结</a></h2>
         <p>
           【2025年8月11日】Puzzlehunt比赛CCBC16的个人总结。
         </p>
@@ -88,7 +55,7 @@
     <section class="card-grid" style="margin-top: 0.75rem;">
       <article class="panel post-card">
         <p class="meta">小说 科幻</p>
-        <h2><a href="novels/16TheFourthOne.html">XVI. 第四者</a></h2>
+        <h2><a href="{{ 'blogs/novels/16TheFourthOne.html' | relative_url }}">XVI. 第四者</a></h2>
         <p>
           【2024年12月25日】一篇很奇怪的小说，感觉大部分内容挺乏味的。带有一定的科幻色彩，同时夹了一些私货。
         </p>
@@ -98,7 +65,7 @@
     <section class="card-grid" style="margin-top: 0.75rem;">
       <article class="panel post-card">
         <p class="meta">小说 平宁</p>
-        <h2><a href="novels/15She.html">XV. 她</a></h2>
+        <h2><a href="{{ 'blogs/novels/15She.html' | relative_url }}">XV. 她</a></h2>
         <p>
           【2022年6月29日】这一篇是我写过的最短的小说，不到1800字（当然，不考虑中学时那些写作记叙文读作小说的作文的情况下）。
         </p>
@@ -108,7 +75,7 @@
     <section class="card-grid" style="margin-top: 0.75rem;">
       <article class="panel post-card">
         <p class="meta">小说 平宁</p>
-        <h2><a href="novels/14TheStringsOf.html">XIV. 雨丝</a></h2>
+        <h2><a href="{{ 'blogs/novels/14TheStringsOf.html' | relative_url }}">XIV. 雨丝</a></h2>
         <p>
           【2022年4月15日】关于一个废物的有些枯燥的小说，充满了琐碎的回忆。
         </p>
@@ -118,7 +85,7 @@
     <section class="card-grid" style="margin-top: 0.75rem;">
       <article class="panel post-card">
         <p class="meta">小说 平宁</p>
-        <h2><a href="novels/12ThePath.html">XII. 山间步道</a></h2>
+        <h2><a href="{{ 'blogs/novels/12ThePath.html' | relative_url }}">XII. 山间步道</a></h2>
         <p>
           【2021年11月25日】基于一个梦写成的短篇小说，有些飘渺。
         </p>
@@ -128,7 +95,7 @@
     <section class="card-grid" style="margin-top: 0.75rem;">
       <article class="panel post-card">
         <p class="meta">小说 平宁</p>
-        <h2><a href="novels/09CAScienceCity.html">IX(C). 20世纪50年代的一个科学城</a></h2>
+        <h2><a href="{{ 'blogs/novels/09CAScienceCity.html' | relative_url }}">IX(C). 20世纪50年代的一个科学城</a></h2>
         <p>
           【2020年1月3日】《IX. 爱情大厅/The Hall of Love》（一个比较长的带有科幻色彩的小说）的设定补充集，但正文从2019年一直咕到了现在……六年之后再看这个短篇，甚至有些不明白为什么在疫情之前就会写出“命途难测”这样的话。
         </p>
@@ -138,7 +105,7 @@
     <section class="card-grid" style="margin-top: 0.75rem;">
       <article class="panel post-card">
         <p class="meta">小说 平宁</p>
-        <h2><a href="novels/09BThePowerOf.html">IX(B). 一个平凡人的力量</a></h2>
+        <h2><a href="{{ 'blogs/novels/09BThePowerOf.html' | relative_url }}">IX(B). 一个平凡人的力量</a></h2>
         <p>
           【2019年12月28日】《IX. 爱情大厅/The Hall of Love》（一个比较长的带有科幻色彩的小说）的设定补充集，但正文从2019年一直咕到了现在……这个短篇的设定与农民工有关——一个我本应有更多了解的群体。
         </p>
@@ -148,7 +115,7 @@
     <section class="card-grid" style="margin-top: 0.75rem;">
       <article class="panel post-card">
         <p class="meta">小说 平宁</p>
-        <h2><a href="novels/03TheLetter.html">III. 信</a></h2>
+        <h2><a href="{{ 'blogs/novels/03TheLetter.html' | relative_url }}">III. 信</a></h2>
         <p>
           【2018年11月24日】本文的内容与现实中的任何事件均无任何关联（？
         </p>
@@ -158,7 +125,7 @@
     <section class="card-grid" style="margin-top: 0.75rem;">
       <article class="panel post-card">
         <p class="meta">小说 平宁</p>
-        <h2><a href="novels/02Researcher.html">II. 研究员</a></h2>
+        <h2><a href="{{ 'blogs/novels/02Researcher.html' | relative_url }}">II. 研究员</a></h2>
         <p>
           【2018年8月10日】整个系列最早的两篇小说之一
         </p>
@@ -168,21 +135,9 @@
     <section class="card-grid" style="margin-top: 0.75rem;">
       <article class="panel post-card">
         <p class="meta">小说 平宁</p>
-        <h2><a href="novels/01ToKingSea.html">I. 至: 靖海</a></h2>
+        <h2><a href="{{ 'blogs/novels/01ToKingSea.html' | relative_url }}">I. 至: 靖海</a></h2>
         <p>
           【2018年7月26日】整个系列最早的两篇小说之一
         </p>
       </article>
     </section>
-
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-wrap">
-      <p>
-        Built with static HTML and CSS for GitHub Pages.
-      </p>
-    </div>
-  </footer>
-</body>
-</html>

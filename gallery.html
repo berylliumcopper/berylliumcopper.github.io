@@ -1,39 +1,6 @@
-<!DOCTYPE html>
-<html lang="zh">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Photo gallery page for a personal website.">
-  <title data-en="berylliumcopper | Gallery" data-zh="berylliumcopper | 图库">berylliumcopper | 图库</title>
-  <link rel="stylesheet" href="assets/css/styles.css">
-  <script src="assets/js/lang-switch.js"></script>
-</head>
-<body>
-  <header class="site-header">
-    <div class="container nav-wrap">
-      <a class="brand" href="index.html">berylliumcopper</a>
-      <nav class="site-nav" aria-label="Main navigation">
-        <a href="index.html">
-          <span data-lang="en">Home</span>
-          <span data-lang="zh">首页</span>
-        </a>
-        <a class="active" href="gallery.html">
-          <span data-lang="en">Gallery</span>
-          <span data-lang="zh">图库</span>
-        </a>
-        <a href="blogs/index.html">
-          <span data-lang="en">Blogs</span>
-          <span data-lang="zh">博客</span>
-        </a>
-        <div class="lang-switch">
-          <button class="lang-btn" data-lang-target="en">EN</button>
-          <button class="lang-btn" data-lang-target="zh">中文</button>
-        </div>
-      </nav>
-    </div>
-  </header>
-
-  <main class="container page-stack">
+---
+layout: default
+---
     <section class="page-intro">
       <p class="eyebrow">
         <span data-lang="en">Gallery</span>
@@ -65,12 +32,12 @@
           <button
             class="gallery-trigger"
             type="button"
-            data-full-src="assets/images/pku-lib-0.png"
+            data-full-src="{{ 'assets/images/pku-lib-0.png' | relative_url }}"
             data-full-alt="A Replica of Peking University Library. (Rendered by PKUMC)"
             data-caption-en="A Replica of Peking University Library. (Rendered by PKUMC)"
             data-caption-zh="北京大学图书馆（由 PKUMC 渲染）">
             <img
-              src="assets/images/pku-lib-0.png"
+              src="{{ 'assets/images/pku-lib-0.png' | relative_url }}"
               alt="A Replica of Peking University Library. (Rendered by PKUMC)"
               loading="lazy"
               decoding="async">
@@ -85,12 +52,12 @@
           <button
             class="gallery-trigger"
             type="button"
-            data-full-src="assets/images/mc-000.png"
+            data-full-src="{{ 'assets/images/mc-000.png' | relative_url }}"
             data-full-alt="Overview of Ping Nan District, Ping Ning."
             data-caption-en="Overview of Ping Nan District, Ping Ning."
             data-caption-zh="平宁市平南区概览">
             <img
-              src="assets/images/mc-000.png"
+              src="{{ 'assets/images/mc-000.png' | relative_url }}"
               alt="Overview of Ping Nan District, Ping Ning."
               loading="lazy"
               decoding="async">
@@ -105,12 +72,12 @@
           <button
             class="gallery-trigger"
             type="button"
-            data-full-src="assets/images/mc-001.png"
+            data-full-src="{{ 'assets/images/mc-001.png' | relative_url }}"
             data-full-alt="Grand Canal Waterfront, Ping Ning."
             data-caption-en="Grand Canal Waterfront, Ping Ning."
             data-caption-zh="运河岸边（平宁）">
             <img
-              src="assets/images/mc-001.png"
+              src="{{ 'assets/images/mc-001.png' | relative_url }}"
               alt="Grand Canal Waterfront, Ping Ning."
               loading="lazy"
               decoding="async">
@@ -125,12 +92,12 @@
           <button
             class="gallery-trigger"
             type="button"
-            data-full-src="assets/images/mc-002.png"
+            data-full-src="{{ 'assets/images/mc-002.png' | relative_url }}"
             data-full-alt="Ping Ning North Railway Station, Ping Ning City."
             data-caption-en="Ping Ning North Railway Station, Ping Ning."
             data-caption-zh="平宁北站">
             <img
-              src="assets/images/mc-002.png"
+              src="{{ 'assets/images/mc-002.png' | relative_url }}"
               alt="Ping Ning North Railway Station, Ping Ning."
               loading="lazy"
               decoding="async">
@@ -145,12 +112,12 @@
           <button
             class="gallery-trigger"
             type="button"
-            data-full-src="assets/images/mc-003.png"
+            data-full-src="{{ 'assets/images/mc-003.png' | relative_url }}"
             data-full-alt="Dewar Square, Ping Ning."
             data-caption-en="Dewar Square, Ping Ning."
             data-caption-zh="杜瓦广场（平宁）">
             <img
-              src="assets/images/mc-003.png"
+              src="{{ 'assets/images/mc-003.png' | relative_url }}"
               alt="Dewar Square, Ping Ning."
               loading="lazy"
               decoding="async">
@@ -165,12 +132,12 @@
           <button
             class="gallery-trigger"
             type="button"
-            data-full-src="assets/images/mc-004.png"
+            data-full-src="{{ 'assets/images/mc-004.png' | relative_url }}"
             data-full-alt="Tower of Allay, Ping Ning."
             data-caption-en="Tower of Allay, Ping Ning."
             data-caption-zh="悦灵塔（平宁）">
             <img
-              src="assets/images/mc-004.png"
+              src="{{ 'assets/images/mc-004.png' | relative_url }}"
               alt="Tower of Allay, Ping Ning."
               loading="lazy"
               decoding="async">
@@ -185,12 +152,12 @@
           <button
             class="gallery-trigger"
             type="button"
-            data-full-src="assets/images/mc-005.png"
+            data-full-src="{{ 'assets/images/mc-005.png' | relative_url }}"
             data-full-alt="Fu Canal Sports Center, Ping Ning."
             data-caption-en="Fu Canal Sports Center, Ping Ning."
             data-caption-zh="府河体育中心（平宁）">
             <img
-              src="assets/images/mc-005.png"
+              src="{{ 'assets/images/mc-005.png' | relative_url }}"
               alt="Fu Canal Sports Center, Ping Ning."
               loading="lazy"
               decoding="async">
@@ -205,12 +172,12 @@
           <button
             class="gallery-trigger"
             type="button"
-            data-full-src="assets/images/mc-006.png"
+            data-full-src="{{ 'assets/images/mc-006.png' | relative_url }}"
             data-full-alt="Ping Ning No. 3 High School, Ping Ning."
             data-caption-en="Ping Ning No. 3 High School, Ping Ning."
             data-caption-zh="平宁三中">
             <img
-              src="assets/images/mc-006.png"
+              src="{{ 'assets/images/mc-006.png' | relative_url }}"
               alt="Ping Ning No. 3 High School, Ping Ning."
               loading="lazy"
               decoding="async">
@@ -225,12 +192,12 @@
           <button
             class="gallery-trigger"
             type="button"
-            data-full-src="assets/images/mc-007.png"
+            data-full-src="{{ 'assets/images/mc-007.png' | relative_url }}"
             data-full-alt="Republic Square, Ping Ning."
             data-caption-en="Republic Square, Ping Ning."
             data-caption-zh="共和广场（平宁）">
             <img
-              src="assets/images/mc-007.png"
+              src="{{ 'assets/images/mc-007.png' | relative_url }}"
               alt="Republic Square, Ping Ning."
               loading="lazy"
               decoding="async">
@@ -245,12 +212,12 @@
           <button
             class="gallery-trigger"
             type="button"
-            data-full-src="assets/images/mc-008.png"
+            data-full-src="{{ 'assets/images/mc-008.png' | relative_url }}"
             data-full-alt="Altar of Ages, Ping Ning."
             data-caption-en="Altar of Ages, Ping Ning."
             data-caption-zh="岁月祭坛（平宁）">
             <img
-              src="assets/images/mc-008.png"
+              src="{{ 'assets/images/mc-008.png' | relative_url }}"
               alt="Altar of Ages, Ping Ning."
               loading="lazy"
               decoding="async">
@@ -265,12 +232,12 @@
           <button
             class="gallery-trigger"
             type="button"
-            data-full-src="assets/images/mc-009.png"
+            data-full-src="{{ 'assets/images/mc-009.png' | relative_url }}"
             data-full-alt="Overview of Friendship Bridge and South Bank, Ping Ning."
             data-caption-en="Overview of Friendship Bridge and South Bank, Ping Ning."
             data-caption-zh="平宁友谊桥及南岸概览">
             <img
-              src="assets/images/mc-009.png"
+              src="{{ 'assets/images/mc-009.png' | relative_url }}"
               alt="Overview of Friendship Bridge and South Bank, Ping Ning."
               loading="lazy"
               decoding="async">
@@ -285,12 +252,12 @@
           <button
             class="gallery-trigger"
             type="button"
-            data-full-src="assets/images/mc-010.png"
+            data-full-src="{{ 'assets/images/mc-010.png' | relative_url }}"
             data-full-alt="Overview of Bei Zhen District, Ping Ning."
             data-caption-en="Overview of Bei Zhen District, Ping Ning."
             data-caption-zh="平宁北镇区概览">
             <img
-              src="assets/images/mc-010.png"
+              src="{{ 'assets/images/mc-010.png' | relative_url }}"
               alt="Overview of Bei Zhen District, Ping Ning."
               loading="lazy"
               decoding="async">
@@ -305,12 +272,12 @@
           <button
             class="gallery-trigger"
             type="button"
-            data-full-src="assets/images/mc-011.png"
+            data-full-src="{{ 'assets/images/mc-011.png' | relative_url }}"
             data-full-alt="Hou Hu Building, Ping Ning."
             data-caption-en="Hou Hu Building, Ping Ning."
             data-caption-zh="后湖阁（平宁）">
             <img
-              src="assets/images/mc-011.png"
+              src="{{ 'assets/images/mc-011.png' | relative_url }}"
               alt="Hou Hu Building, Ping Ning."
               loading="lazy"
               decoding="async">
@@ -325,12 +292,12 @@
           <button
             class="gallery-trigger"
             type="button"
-            data-full-src="assets/images/mc-012.png"
+            data-full-src="{{ 'assets/images/mc-012.png' | relative_url }}"
             data-full-alt="Green City Square & Canal Middle School, Ping Ning."
             data-caption-en="Green City Square & Canal Middle School, Ping Ning."
             data-caption-zh="绿城广场及运河中学（平宁）">
             <img
-              src="assets/images/mc-012.png"
+              src="{{ 'assets/images/mc-012.png' | relative_url }}"
               alt="Green City Square & Canal Middle School, Ping Ning."
               loading="lazy"
               decoding="async">
@@ -345,12 +312,12 @@
           <button
             class="gallery-trigger"
             type="button"
-            data-full-src="assets/images/mc-013.png"
+            data-full-src="{{ 'assets/images/mc-013.png' | relative_url }}"
             data-full-alt="Square of Selene, Ping Ning."
             data-caption-en="Square of Selene, Ping Ning."
             data-caption-zh="塞勒涅广场（平宁）">
             <img
-              src="assets/images/mc-013.png"
+              src="{{ 'assets/images/mc-013.png' | relative_url }}"
               alt="Square of Selene, Ping Ning."
               loading="lazy"
               decoding="async">
@@ -362,9 +329,6 @@
         </figure>
 
       </div>
-    </section>
-
-  </main>
 
   <div class="lightbox" id="lightbox" hidden>
     <div class="lightbox-backdrop" data-close-lightbox></div>
@@ -374,14 +338,6 @@
       <p class="lightbox-caption" id="lightbox-caption"></p>
     </div>
   </div>
-
-  <footer class="site-footer">
-    <div class="container footer-wrap">
-      <p>
-        Built with static HTML and CSS for GitHub Pages.
-      </p>
-    </div>
-  </footer>
 
   <script>
     const lightbox = document.getElementById("lightbox");
@@ -435,5 +391,4 @@
       }
     });
   </script>
-</body>
-</html>
+

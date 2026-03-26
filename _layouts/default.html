@@ -1,0 +1,51 @@
+---
+layout: default
+---
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="{{ site.description }}">
+  <title data-en="berylliumcopper | Home" data-zh="berylliumcopper | 首页">berylliumcopper | 首页</title>
+  <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}?v={{ site.static_files | find: 'path', '/assets/css/styles.css' | map: 'modified_time' | date: '%Y%m%d%H%M%S' }}">
+  <script src="{{ '/assets/js/lang-switch.js' | relative_url }}?v={{ site.static_files | find: 'path', '/assets/js/lang-switch.js' | map: 'modified_time' | date: '%Y%m%d%H%M%S' }}"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="{{ '/' | relative_url }}">berylliumcopper</a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a class="active" href="{{ '/' | relative_url }}">
+          <span data-lang="en">Home</span>
+          <span data-lang="zh">首页</span>
+        </a>
+        <a href="{{ '/gallery.html' | relative_url }}">
+          <span data-lang="en">Gallery</span>
+          <span data-lang="zh">图库</span>
+        </a>
+        <a href="{{ '/blogs/index.html' | relative_url }}">
+          <span data-lang="en">Blogs</span>
+          <span data-lang="zh">博客</span>
+        </a>
+        <div class="lang-switch">
+          <button class="lang-btn" data-lang-target="en">EN</button>
+          <button class="lang-btn" data-lang-target="zh">中文</button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    {{ content }}
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <p>
+        Built with Jekyll for GitHub Pages.
+      </p>
+    </div>
+  </footer>
+</body>
+</html>

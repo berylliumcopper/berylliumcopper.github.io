@@ -1,39 +1,6 @@
-<!DOCTYPE html>
-<html lang="zh">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Personal website with introduction, gallery, blog posts, and project links.">
-  <title data-en="berylliumcopper | Home" data-zh="berylliumcopper | 首页">berylliumcopper | 首页</title>
-  <link rel="stylesheet" href="assets/css/styles.css">
-  <script src="assets/js/lang-switch.js"></script>
-</head>
-<body>
-  <header class="site-header">
-    <div class="container nav-wrap">
-      <a class="brand" href="index.html">berylliumcopper</a>
-      <nav class="site-nav" aria-label="Main navigation">
-        <a class="active" href="index.html">
-          <span data-lang="en">Home</span>
-          <span data-lang="zh">首页</span>
-        </a>
-        <a href="gallery.html">
-          <span data-lang="en">Gallery</span>
-          <span data-lang="zh">图库</span>
-        </a>
-        <a href="blogs/index.html">
-          <span data-lang="en">Blogs</span>
-          <span data-lang="zh">博客</span>
-        </a>
-        <div class="lang-switch">
-          <button class="lang-btn" data-lang-target="en">EN</button>
-          <button class="lang-btn" data-lang-target="zh">中文</button>
-        </div>
-      </nav>
-    </div>
-  </header>
-
-  <main>
+---
+layout: default
+---
     <section class="hero">
       <div class="container hero-grid">
         <div>
@@ -140,14 +107,4 @@
       </div>
 
     </section>
-  </main>
 
-  <footer class="site-footer">
-    <div class="container footer-wrap">
-      <p>
-        Built with static HTML and CSS for GitHub Pages.
-      </p>
-    </div>
-  </footer>
-</body>
-</html>
