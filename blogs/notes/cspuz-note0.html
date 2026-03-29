@@ -1,0 +1,89 @@
+---
+layout: default
+---
+<article class="article container">
+  <nav class="page-nav">
+    <a href="{{ '/blogs/index.html' | relative_url }}" class="back-link">
+      <span data-lang="en">&larr; Back to all posts</span>
+      <span data-lang="zh">&larr; 返回博客列表</span>
+    </a>
+  </nav>
+  <p class="meta">编程 解谜</p>
+  <h1>cspuz 使用笔记</h1>
+  <h3>（2025年9月）</h3>
+
+  <em>主要记录一些cspuz的基本使用方法，以及一些常用代码块。不涉及具体的如何将纸笔规则转化为代码的思路。由于是给自己看的，所以可能写得比较随意。</em>
+  <p>&nbsp;</p>
+
+  <h2>基本结构</h2>
+
+  <p>首先需要用<code>solver = Solver()</code>创建一个求解器</p>
+  <p>常用的变量有<code>solver.bool_array</code>和<code>solver.int_array</code>，</p>
+  <p>对于最终答案需要解出或输出的值，应当用<code>solver.add_answer_key</code>将其添加至求解器的答案中</p>
+  <p>&nbsp;</p>
+
+  <p>对于一个L*W的网格，<code>BoolGridFrame(solver, L, W)</code>可以给出它的边框，其中每条线段由一个bool表述</p>
+  <p>如果只想要网格的内边框（或者需要计算的是经过一些格子中心的回路），应当使用<code>grid = BoolGridFrame(solver, L-1, W-1)</code>，此时：</p>
+  <p><code>grid[y*2 - 1, x*2]</code>表示格点[y - 1, x]与[y, x]之间的连线，<code>grid[y*2, x*2 - 1]</code>表示格点[y, x - 1]与[y, x]之间的连线</p>
+  <p><code>is_passed = graph.active_edges_single_cycle(solver, grid)</code>表示所有true代表的edge组成一个不交叉、不分岔的单回路，此时is_passed给出每个格点是否被经过</p>
+  <p>注意：如果在生成grid时使用的是正确的L-1, W-1，则进一步生成的is_passed的维度就会是L, W</p>
+  <p>&nbsp;</p>
+  
+  <p><code>solver.ensure</code>将条件输入给求解器</p>
+  <p>在书写逻辑表达式时，应使用<code>| & ~</code>表示or and not</p>
+  <p>不能对待解的变量使用if elif else语句，而应当使用<code>.cond(T, F) == (other expressions)</code>表示逻辑</p>
+  <p>也可以使用<code>x.then(s)</code>语句，表示只有在x为True时，才要求表达式s为True</p>
+  <p>当有不太容易表述的逻辑时，可以引入临时变量（<code>solver.bool_array</code>、<code>solver.int_array</code>或是python自带的基本类型、list()等），但是不能使用set()，因为待解的表达式是不可哈希的</p>
+  <p>&nbsp;</p>
+  
+  <p>如果有多解，部分无法确定的元素会输出None</p>
+  <p>&nbsp;</p>
+  
+  <p>输出：可以使用<code>stringtify_array(#, str)</code>和<code>stringify_grid_frame(#)</code>输出字符串形式的解</p>
+  <p>&nbsp;</p>
+  
+  <h2>常用代码块</h2>
+  
+  <p>以下代码描述了“两个star不能相邻或对角相邻”</p>
+  <pre><code>    solver.ensure(~(stars[:-1, :] & stars[1:, :]))
+    solver.ensure(~(stars[:, :-1] & stars[:, 1:]))
+    solver.ensure(~(stars[:-1, :-1] & stars[1:, 1:]))
+    solver.ensure(~(stars[:-1, 1:] & stars[1:, :-1]))</code></pre>
+  <p>&nbsp;</p>
+
+  <p>以下代码描述了“每行有n_star个star”</p>
+  <pre><code>    for x in range(L):
+        solver.ensure(count_true(stars[x, :]) == n_star)</code></pre>
+  <p>&nbsp;</p>
+
+  <p>以下代码定义了一些新的变量，描述从每个点看去，各个方向有多少长度的连续线段</p>
+  <pre><code>    to_up = solver.int_array((L, L), 0, L - 1)
+    to_down = solver.int_array((L, L), 0, L - 1)
+    to_left = solver.int_array((L, L), 0, L - 1)
+    to_right = solver.int_array((L, L), 0, L - 1)
+    for y in range(L):
+        for x in range(L):
+            if y == 0:
+                solver.ensure(to_up[y, x] == 0)
+            else:
+                solver.ensure(to_up[y, x] == (grid[y * 2 - 1, x * 2].cond(to_up[y - 1, x] + 1, 0)))
+            if y == L - 1:
+                solver.ensure(to_down[y, x] == 0)
+            else:
+                solver.ensure(to_down[y, x] == (grid[y * 2 + 1, x * 2].cond(to_down[y + 1, x] + 1, 0)))
+            if x == 0:
+                solver.ensure(to_left[y, x] == 0)
+            else:
+                solver.ensure(to_left[y, x] == (grid[y * 2, x * 2 - 1].cond(to_left[y, x - 1] + 1, 0)))
+            if x == L - 1:
+                solver.ensure(to_right[y, x] == 0)
+            else:
+                solver.ensure(to_right[y, x] == (grid[y * 2, x * 2 + 1].cond(to_right[y, x + 1] + 1, 0)))</code></pre>
+
+  <nav class="page-nav bottom-nav">
+    <a href="{{ '/blogs/index.html' | relative_url }}" class="back-link">
+      <span data-lang="en">&larr; Back to all posts</span>
+      <span data-lang="zh">&larr; 返回博客列表</span>
+    </a>
+  </nav>
+</article>
